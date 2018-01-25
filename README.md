@@ -72,21 +72,21 @@ naming convention, i.e. sequential number padded to 6 digits
 then lower-case name of the class.
 
 ```
--rw-r--r--      1 alexeysimonov  staff     177 27 Aug 15:55 000001_yellow.png
--rw-r--r--      1 alexeysimonov  staff     188 27 Aug 15:55 000002_yellow.png
--rw-r--r--      1 alexeysimonov  staff     245 27 Aug 15:55 000003_yellow.png
--rw-r--r--      1 alexeysimonov  staff     159 27 Aug 15:55 000004_redleft.png
--rw-r--r--      1 alexeysimonov  staff     200 27 Aug 15:55 000005_red.png
--rw-r--r--      1 alexeysimonov  staff     257 27 Aug 15:55 000006_red.png
--rw-r--r--      1 alexeysimonov  staff     228 27 Aug 15:55 000007_redleft.png
--rw-r--r--      1 alexeysimonov  staff     265 27 Aug 15:55 000008_red.png
--rw-r--r--      1 alexeysimonov  staff     220 27 Aug 15:55 000009_red.png
--rw-r--r--      1 alexeysimonov  staff     329 27 Aug 15:55 000010_red.png
--rw-r--r--      1 alexeysimonov  staff     199 27 Aug 15:55 000011_redleft.png
--rw-r--r--      1 alexeysimonov  staff     352 27 Aug 15:55 000012_red.png
--rw-r--r--      1 alexeysimonov  staff     195 27 Aug 15:55 000013_redleft.png
--rw-r--r--      1 alexeysimonov  staff     307 27 Aug 15:55 000014_red.png
--rw-r--r--      1 alexeysimonov  staff     244 27 Aug 15:55 000015_red.png
+-rw-r--r--      1 hkkim  hkkim     177 27 Aug 15:55 000001_yellow.png
+-rw-r--r--      1 hkkim  hkkim     188 27 Aug 15:55 000002_yellow.png
+-rw-r--r--      1 hkkim  hkkim     245 27 Aug 15:55 000003_yellow.png
+-rw-r--r--      1 hkkim  hkkim     159 27 Aug 15:55 000004_redleft.png
+-rw-r--r--      1 hkkim  hkkim     200 27 Aug 15:55 000005_red.png
+-rw-r--r--      1 hkkim  hkkim     257 27 Aug 15:55 000006_red.png
+-rw-r--r--      1 hkkim  hkkim     228 27 Aug 15:55 000007_redleft.png
+-rw-r--r--      1 hkkim  hkkim     265 27 Aug 15:55 000008_red.png
+-rw-r--r--      1 hkkim  hkkim     220 27 Aug 15:55 000009_red.png
+-rw-r--r--      1 hkkim  hkkim     329 27 Aug 15:55 000010_red.png
+-rw-r--r--      1 hkkim  hkkim     199 27 Aug 15:55 000011_redleft.png
+-rw-r--r--      1 hkkim  hkkim     352 27 Aug 15:55 000012_red.png
+-rw-r--r--      1 hkkim  hkkim     195 27 Aug 15:55 000013_redleft.png
+-rw-r--r--      1 hkkim  hkkim     307 27 Aug 15:55 000014_red.png
+-rw-r--r--      1 hkkim  hkkim     244 27 Aug 15:55 000015_red.png
 ```
 
 ## Train a Classifier
@@ -117,5 +117,5 @@ The following script demonstrates the model loading and prediction:
 ```
 or
 ```bash
-python test_label_images.py --input_yaml=/home/hkkim/data/datasets/Bosch_Traffic_Light/data/test.yaml
+python test_label_images.py --input_yaml=/data/test.yaml
 ```
