@@ -2,7 +2,7 @@
 
 * This is re-modified fork of original Bosch code(https://github.com/bosch-ros-pkg/bstld) and modified code by Kung Fu Panda team(https://github.com/asimonov/Bosch-TL-Dataset).
 * This fork is modified by Hyun-Koo KIM.
-* This is just traffic light classificaton Model. Not Detection.
+* This is just traffic light classificaton Model. Not traffic light Detection !!
 
 ## Dev. Env. Setup
 
@@ -114,8 +114,8 @@ python predict.py
 The following script demonstrates the model loading and prediction:
 ```bash
 > ./run_predic.sh
-or
 ```
+or
 ```bash
 python test_label_images.py --input_yaml=/home/hkkim/data/datasets/Bosch_Traffic_Light/data/test.yaml
 ```
