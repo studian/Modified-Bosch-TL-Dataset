@@ -113,7 +113,7 @@ python predict.py
 ## Predictions of test images
 The following script demonstrates the model loading and prediction:
 ```bash
-> ./run_predic.sh
+./run_predic.sh
 ```
 or
 ```bash
