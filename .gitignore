@@ -1,0 +1,6 @@
+__pycache__
+ckpt
+data
+git_org_model
+train_summaries
+*.pyc
