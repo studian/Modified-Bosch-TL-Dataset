@@ -1,11 +1,14 @@
-﻿
 ## Traffic Lights Detection and Classification
 
+* This is re-modified fork of original Bosch code(https://github.com/bosch-ros-pkg/bstld) and modified code by Kung Fu Panda team(https://github.com/asimonov/Bosch-TL-Dataset).
+* This fork is modified by Hyun-Koo KIM.
+* This is just traffic light classificaton Model. Not Detection.
 
-This is a fork of original Bosch code, modified by Kung Fu Panda team to
-use in Udacity Self-Driving Car Engineer Nanodegree Capstone project.
+## Dev. Env. Setup
 
-## Setup
+* conda env create -f environment.yml
+
+## Dataset Setup
 
 The Bosch Small Traffic Lights Dataset
 can be downloaded [here](https://hci.iwr.uni-heidelberg.de/node/6132).
@@ -105,4 +108,14 @@ At the end it saves the model.
 The following script demonstrates the model loading and prediction:
 ```bash
 python predict.py
+```
+
+## Predictions of test images
+The following script demonstrates the model loading and prediction:
+```bash
+> ./run_predic.sh
+or
+```
+```bash
+python test_label_images.py --input_yaml=/home/hkkim/data/datasets/Bosch_Traffic_Light/data/test.yaml
 ```
