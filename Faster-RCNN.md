@@ -1,5 +1,6 @@
-```bash
+## Setting Dev-Environment(tensorflow, model, etc.) and Dataset
 
+```bash
 #!/bin/bash
 # connect to the instance with security key in ~/.ssh/
 #
@@ -50,10 +51,10 @@ pip install tensorflow-gpu
 pip install tqdm
 echo -e "\n generating train tfrecords"
 chmod +x "bosch-to-tfrecords.py"
-./bosch-to-tfrecords.py --output_path=data/train.record
+python bosch-to-tfrecords.py --output_path=data/train.record
 echo -e "\n generating test tfrecords"
 chmod +x "bosch-to-tfrecords-test.py" 
-./bosch-to-tfrecords-test.py --output_path=data/test.record
+python bosch-to-tfrecords-test.py --output_path=data/test.record
 
 # set up protobuf
 echo -e "\n set up protobuf"
@@ -72,3 +73,7 @@ export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
 #Testing the Installation
 python object_detection/builders/model_builder_test.py
 ```
+## Training
+
+## Prediction
+
