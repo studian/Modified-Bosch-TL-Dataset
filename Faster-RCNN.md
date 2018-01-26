@@ -72,38 +72,42 @@
 #!/bin/bash
 # connect to the instance with security key in ~/.ssh/
 #
+
 # clone TensorFlow repo to the instance 
-# echo "cloning tensorflow lib"
-# git clone https://github.com/tensorflow/models.git
-# sudo mv models/research/object_detection ./
-# sudo mv models/research/slim ./
+echo "cloning tensorflow lib"
+git clone https://github.com/tensorflow/models.git
+sudo mv models/research/object_detection ./
+sudo mv models/research/slim ./
 # mkdir model && cd model
 # mkdir train
 # mkdir eval
 # cd ..
-# echo -e "\n downloading bosch dataset"
+
+# downloading bosch dataset
+echo -e "\n downloading bosch dataset"
 cd data
-# wget https://s3-us-west-1.amazonaws.com/bosch-tl/dataset_test_rgb.zip.001
-# wget https://s3-us-west-1.amazonaws.com/bosch-tl/dataset_test_rgb.zip.002
-# wget https://s3-us-west-1.amazonaws.com/bosch-tl/dataset_test_rgb.zip.003
-# wget https://s3-us-west-1.amazonaws.com/bosch-tl/dataset_test_rgb.zip.004
-# wget https://s3-us-west-1.amazonaws.com/bosch-tl/dataset_test_rgb.zip.005
-# wget https://s3-us-west-1.amazonaws.com/bosch-tl/dataset_test_rgb.zip.006
-# wget https://s3-us-west-1.amazonaws.com/bosch-tl/dataset_test_rgb.zip.007
+wget https://s3-us-west-1.amazonaws.com/bosch-tl/dataset_test_rgb.zip.001
+wget https://s3-us-west-1.amazonaws.com/bosch-tl/dataset_test_rgb.zip.002
+wget https://s3-us-west-1.amazonaws.com/bosch-tl/dataset_test_rgb.zip.003
+wget https://s3-us-west-1.amazonaws.com/bosch-tl/dataset_test_rgb.zip.004
+wget https://s3-us-west-1.amazonaws.com/bosch-tl/dataset_test_rgb.zip.005
+wget https://s3-us-west-1.amazonaws.com/bosch-tl/dataset_test_rgb.zip.006
+wget https://s3-us-west-1.amazonaws.com/bosch-tl/dataset_test_rgb.zip.007
 cat dataset_test_rgb.zip* > dataset_test_rgb.zip
 find . -type f -name 'dataset_test_rgb.zip.*' -delete
 unzip dataset_test_rgb.zip
 rm dataset_test_rgb.zip
 rm non-commercial_license.docx
-# wget https://s3-us-west-1.amazonaws.com/bosch-tl/dataset_train_rgb.zip.001
-# wget https://s3-us-west-1.amazonaws.com/bosch-tl/dataset_train_rgb.zip.002
-# wget https://s3-us-west-1.amazonaws.com/bosch-tl/dataset_train_rgb.zip.003
-# wget https://s3-us-west-1.amazonaws.com/bosch-tl/dataset_train_rgb.zip.004
+wget https://s3-us-west-1.amazonaws.com/bosch-tl/dataset_train_rgb.zip.001
+wget https://s3-us-west-1.amazonaws.com/bosch-tl/dataset_train_rgb.zip.002
+wget https://s3-us-west-1.amazonaws.com/bosch-tl/dataset_train_rgb.zip.003
+wget https://s3-us-west-1.amazonaws.com/bosch-tl/dataset_train_rgb.zip.004
 cat dataset_train_rgb.zip* > dataset_train_rgb.zip
 find . -type f -name 'dataset_train_rgb.zip.*' -delete
 unzip dataset_train_rgb.zip
 rm dataset_train_rgb.zip
 rm non-commercial_license.docx
+
 # download the pretrained model
 #cd ~/models/model
 cd ..
@@ -121,10 +125,10 @@ pip install tensorflow-gpu
 pip install tqdm
 echo -e "\n generating train tfrecords"
 chmod +x "bosch-to-tfrecords.py"
-./bosch-to-tfrecords.py --output_path=data/train.record
+python bosch-to-tfrecords.py --output_path=data/train.record
 echo -e "\n generating test tfrecords"
 chmod +x "bosch-to-tfrecords-test.py" 
-./bosch-to-tfrecords-test.py --output_path=data/test.record
+python bosch-to-tfrecords-test.py --output_path=data/test.record
 
 # set up protobuf
 echo -e "\n set up protobuf"
