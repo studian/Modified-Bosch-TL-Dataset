@@ -74,6 +74,8 @@ export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
 python object_detection/builders/model_builder_test.py
 ```
 ## 2. Training
-
+```bash
+python object_detection/train.py --pipeline_config_path=config/faster_rcnn_traffic_bosch.config --train_dir=training_data/frcnn
+```
 ## 3. Prediction
 
