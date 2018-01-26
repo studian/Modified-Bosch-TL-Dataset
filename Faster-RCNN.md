@@ -73,9 +73,23 @@ export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
 #Testing the Installation
 python object_detection/builders/model_builder_test.py
 ```
+
 ## 2. Training
 ```bash
 python object_detection/train.py --pipeline_config_path=config/faster_rcnn_traffic_bosch.config --train_dir=training_data/frcnn
 ```
+
+## 3. Saving for Inference
+### 1) modified line 71 of "object_detection/exporter.py"
+```
+# rewrite_options = rewriter_config_pb2.RewriterConfig(layout_optimizer=rewriter_config_pb2.RewriterConfig.ON)
+rewrite_options = rewriter_config_pb2.RewriterConfig()
+```
+### 2) run script
+```bash
+python object_detection/export_inference_graph.py --pipeline_config_path=config/faster_rcnn_traffic_bosch.config --trained_checkpoint_prefix=training_data/frcnn/model.ckpt-12979 --output_directory=frozen_frcnn
+```
+
+
 ## 3. Prediction
 
