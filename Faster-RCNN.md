@@ -1,4 +1,4 @@
-## Setting Dev-Environment(tensorflow, model, etc.) and Dataset
+## 1. Setting Dev-Environment(tensorflow, model, etc.) and Dataset
 
 ```bash
 #!/bin/bash
@@ -73,7 +73,7 @@ export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
 #Testing the Installation
 python object_detection/builders/model_builder_test.py
 ```
-## Training
+## 2. Training
 
-## Prediction
+## 3. Prediction
 
