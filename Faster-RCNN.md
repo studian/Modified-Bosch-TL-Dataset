@@ -1,4 +1,4 @@
-## 0. pip install packages 
+## 0. Depand on "pip installed packages" 
 * bleach (1.5.0)
 * cffi (1.9.1)
 * conda (4.3.11)
