@@ -169,8 +169,8 @@ python object_detection/export_inference_graph.py --pipeline_config_path=config/
 
 ## 4. Prediction of Test Dataset
 ### 1) jupyter notebook
-run `jupyter notebook`
-run `object_detection_bosch.ipynb`
+* run `jupyter notebook`
+* run `object_detection_bosch.ipynb`
 ### 2) Run python code
 ```bash
 python Predict_usingTestDB_FasterRCNN_BoschTL.py
