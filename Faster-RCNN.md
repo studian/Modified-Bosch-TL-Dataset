@@ -90,6 +90,14 @@ rewrite_options = rewriter_config_pb2.RewriterConfig()
 python object_detection/export_inference_graph.py --pipeline_config_path=config/faster_rcnn_traffic_bosch.config --trained_checkpoint_prefix=training_data/frcnn/model.ckpt-12979 --output_directory=frozen_frcnn
 ```
 
+## 4. Prediction of Test Dataset
+### 1) jupyter notebook
+run `jupyter notebook`
+run `object_detection_bosch.ipynb`
+### 2) Run python code
+```bash
+python Predict_usingTestDB_FasterRCNN_BoschTL.py
+```
 
-## 3. Prediction
+
 
